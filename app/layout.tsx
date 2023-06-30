@@ -1,18 +1,29 @@
-import { cn } from "#/lib/utils";
-import "./globals.css";
-import { Inter } from "next/font/google";
+import { Be_Vietnam_Pro, Space_Mono } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const beVietnamPro = Be_Vietnam_Pro({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700", "800", "900"],
+    display: "swap",
+    variable: "--font-be-vietnam-pro",
+});
+
+const spaceMono = Space_Mono({
+    subsets: ["latin"],
+    weight: ["400", "700"],
+    variable: "--font-space-mono",
+});
 
 export const metadata = {
     title: "elizielx",
     description: "",
 };
 
+import "#/lib/styles/globals.scss";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={cn(inter.className, "bg-black", "overflow-x-hidden", "text-white")}>{children}</body>
+            <body className={`${beVietnamPro.variable} ${spaceMono.variable}`}>{children}</body>
         </html>
     );
 }
