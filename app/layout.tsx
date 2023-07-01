@@ -19,6 +19,7 @@ export const metadata = {
 };
 
 import "#/lib/styles/globals.scss";
+import PageTransition from "#/lib/components/PageTransition";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (

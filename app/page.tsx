@@ -1,29 +1,16 @@
 "use client";
 
-import Link from "next/link";
-import Navbar from "#/lib/components/Navbar";
-import Layout from "#/lib/components/Layout";
-import Socials from "#/lib/components/Socials";
+import PageLayout from "#/lib/layout/PageLayout";
 
 export default function Home() {
     return (
-        <>
-            <Navbar />
-            <Layout title="elizielx">
-                <p className="subtitle">
-                    Hi-ya! I am <span>Yehezkiel Dio</span> aka <span>elizielx</span> — a full-stack developer based in{" "}
-                    <span>Balikpapan, 🇮🇩 Indonesia. </span> I&apos;m currently working on <span>web development</span>,
-                    and have keen interest in <span>software architecture</span>, and learning new things.
-                </p>
-                <p className="subtitle">
-                    For the present, — I spend most of my time reading <span>fanfictions</span>! and <em>trying</em> to
-                    find more <span>fanfictions</span> to read. Check out{" "}
-                    <Link href="#" legacyBehavior>
-                        <a>this section</a>
-                    </Link>{" "}
-                    for some of my personal favorites.
-                </p>
-            </Layout>
-        </>
+        <PageLayout>
+            <header className="hero">
+                <div className="hero__content">
+                    <h1 className="hero__title">Your Title</h1>
+                    <h2 className="hero__subtitle">Your Subtitle</h2>
+                </div>
+            </header>
+        </PageLayout>
     );
 }
