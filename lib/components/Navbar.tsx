@@ -9,7 +9,7 @@ export const Navbar = () => {
             <nav className="navbar is-transparent" role="navigation">
                 <div className="navbar-brand">
                     <Link href="/" legacyBehavior>
-                        <a className="navbar-item">Yehezkiel Dio (elizielx)</a>
+                        <a className="navbar-item">YehezkielDio (elizielx)</a>
                     </Link>
                     <a
                         onClick={() => {

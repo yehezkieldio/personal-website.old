@@ -1,11 +1,11 @@
 import React from "react";
 
-interface Payout {
+interface LayoutProps {
     title: string;
     children: React.ReactNode;
 }
 
-export const Layout = (props: React.PropsWithChildren<Payout>) => {
+export const Layout = (props: React.PropsWithChildren<LayoutProps>) => {
     return (
         <main className="page-main">
             <div className="main-container">

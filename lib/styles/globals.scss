@@ -53,9 +53,13 @@ body {
 
 .page-header {
     background: $secondary-background;
-    padding: 4rem 2rem 4rem;
+    padding: 2rem 2rem 4rem;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+
+    @include breakpoint(extra_small_devices) {
+        padding: 2rem 1rem 4rem;
+    }
 }
 
 .page-main {
@@ -153,6 +157,10 @@ body {
         background: $secondary-background;
         padding: 4rem 2rem 2.5rem;
 
+        @include breakpoint(extra_small_devices) {
+            padding: 4rem 1rem 2.5rem;
+        }
+
         & > * {
             max-width: 1200px;
             margin-left: auto;
@@ -215,6 +223,11 @@ body {
     .title {
         max-width: 845px;
         letter-spacing: -0.1px;
+    }
+
+    .subtitle > span {
+        color: lighten($color: $primary-foreground, $amount: 15);
+        font-weight: 600;
     }
 
     strong {
