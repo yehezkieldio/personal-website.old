@@ -16,7 +16,6 @@ export default function Home() {
                     Currently working on <strong>web development</strong>, interested in{" "}
                     <strong>software architecture</strong>, and learning whatever I see fit. <br />
                 </p>
-                <p className="subtitle"></p>
                 <p className="subtitle">
                     For the present, — I spend most of my time reading fanfictions! and <em>trying</em> to find more
                     fanfictions to read. Check out{" "}
