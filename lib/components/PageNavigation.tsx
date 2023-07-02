@@ -1,52 +1,72 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 interface PageNavigationProps {
     title: string;
+    links: LinkItem[];
 }
 
-export default function PageNavigation(props: React.PropsWithChildren<PageNavigationProps>) {
+interface LinkItem {
+    title: string;
+    href: string;
+}
+
+export default function PageNavigation(props: React.PropsWithoutRef<PageNavigationProps>) {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
+    const toggleNavigationMenu = () => {
         setIsOpen(!isOpen);
     };
 
     return (
-        <nav className="navbar">
-            <div className="navbar__title">Your Title</div>
-            <div className="navbar__items">
-                <div className="navbar__item">Item 1</div>
-                <div className="navbar__item">Item 2</div>
-                <div className="navbar__item">Item 3</div>
-            </div>
-            <div className="navbar__hamburger" onClick={toggleMenu}>
-                <div className="navbar__hamburger-line"></div>
-                <div className="navbar__hamburger-line"></div>
-                <div className="navbar__hamburger-line"></div>
-            </div>
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        className="navbar__overlay"
-                        initial={{ opacity: 0, y: -100 }} // Initial position above the screen
-                        animate={{ opacity: 1, y: 0 }} // Final position at the top of the screen
-                        exit={{ opacity: 0, y: -100 }} // Exit position above the screen
-                        transition={{
-                            type: "tween",
-                        }}
-                    >
-                        <div className="navbar__overlay-exit" onClick={toggleMenu}>
-                            &#10005;
-                        </div>
-                        <div className="navbar__overlay-items">
-                            <div className="navbar__overlay-item">Item 1</div>
-                            <div className="navbar__overlay-item">Item 2</div>
-                            <div className="navbar__overlay-item">Item 3</div>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </nav>
+        <header className="page-navigation-header">
+            <nav className="page-navigation" role="navigation">
+                <div className="page-navigation--start">
+                    <Link href="/" className="page-navigation--start-item">
+                        {props.title}
+                    </Link>
+                </div>
+                <div className="page-navigation--end">
+                    {props.links.map((link) => (
+                        <Link href={link.href} key={link.href} className="page-navigation--end-item">
+                            {link.title}
+                        </Link>
+                    ))}
+                </div>
+                <div className="page-navigation--hamburger" onClick={toggleNavigationMenu}>
+                    <div className="page-navigation--hamburger-line"></div>
+                    <div className="page-navigation--hamburger-line"></div>
+                </div>
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            className="page-navigation--overlay"
+                            initial={{ opacity: 0, y: -100 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -100 }}
+                            transition={{
+                                type: "tween",
+                            }}
+                        >
+                            <div className="page-navigation--overlay-exit" onClick={toggleNavigationMenu}>
+                                &#10005;
+                            </div>
+                            <div className="page-navigation--overlay-items">
+                                {props.links.map((link) => (
+                                    <Link
+                                        href={link.href}
+                                        key={link.href}
+                                        className="page-navigation--overlay-items-item"
+                                    >
+                                        {link.title}
+                                    </Link>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </nav>
+        </header>
     );
 }

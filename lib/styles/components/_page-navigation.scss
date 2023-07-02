@@ -1,0 +1,117 @@
+.page-navigation-header {
+    background: $secondary-background;
+    padding: 2rem 2rem 4rem;
+
+    @include breakpoint(extra_small_devices) {
+        padding: 2rem 1rem 4rem;
+    }
+
+    .page-navigation {
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--start {
+            &-item {
+                text-transform: lowercase;
+                color: $primary-foreground;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $primary-foreground;
+                }
+            }
+        }
+
+        &--end {
+            @include breakpoint(extra_small_devices) {
+                display: none;
+            }
+            &-item {
+                text-decoration: underline;
+                letter-spacing: 0.5px;
+                margin-left: 2em;
+                text-transform: lowercase;
+                color: $primary-foreground;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    color: lighten($color: $primary-foreground, $amount: 15);
+                    transition: color 0.2s ease-in-out;
+                }
+            }
+        }
+
+        &--hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+
+            @include breakpoint(extra_small_devices) {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+            }
+
+            &-line {
+                width: 25px;
+                height: 2px;
+                background-color: $accent;
+                margin-bottom: 5px;
+            }
+        }
+
+        &--overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: $primary-background;
+            display: flex;
+            justify-content: center;
+            z-index: 999;
+
+            &-exit {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            &-exit {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            &-items {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                &-item {
+                    text-decoration: underline;
+                    letter-spacing: 0.5px;
+                    text-transform: lowercase;
+                    color: $primary-foreground;
+                    margin-top: 24px;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: lighten($color: $primary-foreground, $amount: 15);
+                        transition: color 0.2s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
