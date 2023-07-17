@@ -16,8 +16,8 @@ export default function PageLayout(props: React.PropsWithChildren<PageLayoutProp
                         href: "/",
                     },
                     {
-                        title: "about",
-                        href: "/about",
+                        title: "contact",
+                        href: "/contact",
                     },
                 ]}
             />
