@@ -17,11 +17,11 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
     metadataBase: new URL(`http://localhost:${process.env.PORT || 3000}`),
     title: "elizielx",
-    description: "A Indonesian university student majoring in computer science and a full-stack developer.",
+    description: "A Indonesian university student majoring in informatics and a full-stack developer.",
     openGraph: {
         title: "elizielx",
         siteName: "elizielx",
-        description: "A Indonesian university student majoring in computer science and a full-stack developer.",
+        description: "A Indonesian university student majoring in informatics and a full-stack developer.",
         images: [
             {
                 url: "/android-chrome-192x192.png",
@@ -78,8 +78,6 @@ export const metadata: Metadata = {
 };
 
 import "#/lib/styles/main.scss";
-
-import Layout from "#/lib/components/layout";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (

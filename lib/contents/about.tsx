@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutContents() {
     return (
-        <div className="page-about">
+        <div className="page-base page-about">
             <div className="about-wrapper">
                 <div className="about-profile">
                     <Image

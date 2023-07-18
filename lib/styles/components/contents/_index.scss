@@ -1,8 +1,4 @@
 .page-index {
-    padding: 0 2rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-
     @include breakpoint(extra_small_devices) {
         padding: 0rem 0.5rem;
         padding-top: 4rem;

@@ -14,12 +14,16 @@ export default function Layout(props: React.PropsWithChildren<LayoutProps>) {
                 title="yehezkieldio (elizielx)"
                 links={[
                     {
-                        title: "Home",
+                        title: "home",
                         href: "/",
                     },
                     {
                         title: "about",
                         href: "/about",
+                    },
+                    {
+                        title: "contact",
+                        href: "/contact",
                     },
                 ]}
             />

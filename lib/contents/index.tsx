@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function IndexContents() {
     return (
-        <div className="page-index">
+        <div className="page-base page-index">
             <div className="introduction">
                 <p className="pretitle">Hi-ya! I am</p>
                 <h1 className="title">Yehezkiel Dio,</h1>
@@ -10,7 +10,7 @@ export default function IndexContents() {
                     a <strong>full-stack developer</strong> based in Balikpapan, Indonesia.
                 </p>
                 <div className="call-to-action">
-                    <Link href="/" className="button button--solid">
+                    <Link href="/contact" className="button button--solid">
                         Get In Touch
                     </Link>
                 </div>
