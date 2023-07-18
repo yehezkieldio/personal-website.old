@@ -16,7 +16,6 @@ export default function IndexContents() {
             />
             <PageContainer>
                 <div className="page-index">
-                    <div className="pattern-dots"></div>
                     <div className="introduction">
                         <p className="pretitle">Hi-ya! I am</p>
                         <h1 className="title">Yehezkiel Dio,</h1>
