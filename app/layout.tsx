@@ -79,10 +79,14 @@ export const metadata: Metadata = {
 
 import "#/lib/styles/main.scss";
 
+import Layout from "#/lib/components/layout";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={`${beVietnamPro.variable} ${spaceMono.variable}`}>{children}</body>
+            <body className={`${beVietnamPro.variable} ${spaceMono.variable}`}>
+                <Layout>{children}</Layout>
+            </body>
         </html>
     );
 }

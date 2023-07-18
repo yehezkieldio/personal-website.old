@@ -58,6 +58,9 @@ export default function PageNavigation(props: React.PropsWithoutRef<PageNavigati
                                         href={link.href}
                                         key={link.href}
                                         className="page-navigation--overlay-items-item"
+                                        onClick={() => {
+                                            setIsOpen(false);
+                                        }}
                                     >
                                         {link.title}
                                     </Link>
