@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     manifest: "/site.webmanifest",
 };
 
-import "#/lib/styles/globals.scss";
+import "#/lib/styles/main.scss";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (

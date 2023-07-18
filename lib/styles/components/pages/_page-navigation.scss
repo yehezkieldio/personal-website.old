@@ -1,8 +1,6 @@
 .page-navigation-header {
     background: $secondary-background;
     background-image: linear-gradient(to right, $primary-background, $secondary-background);
-    // border-bottom: 1px solid darken($color: $slate, $amount: 25);
-
     padding: 2rem;
 
     @include breakpoint(extra_small_devices) {

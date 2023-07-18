@@ -1,4 +1,4 @@
-import PageTransition from "./PageTransition";
+import PageTransition from "./page-transition";
 
 interface PageContainerProps {
     children: React.ReactNode;

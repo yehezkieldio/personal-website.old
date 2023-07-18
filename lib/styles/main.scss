@@ -1,0 +1,45 @@
+@import "./mixins";
+@import "./variables";
+
+*,
+*::before,
+*::after {
+    border-width: 0;
+    border-style: solid;
+
+    box-sizing: border-box;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    color: $primary-foreground;
+    line-height: 1.45;
+
+    @include breakpoint(extra_large_devices) {
+        border: 1em solid linear-gradient(to right, $primary-background, $secondary-background);
+    }
+}
+
+html,
+body {
+    font-family: $be-vietnam-pro;
+    font-feature-settings: "kern";
+    background: $primary-background;
+}
+
+a {
+    color: $accent;
+    text-decoration: none;
+}
+
+@import "./components/button";
+@import "./components/pages/page-container";
+@import "./components/pages/page-navigation";
+@import "./components/contents/index";
