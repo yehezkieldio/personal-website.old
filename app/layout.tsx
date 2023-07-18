@@ -15,20 +15,12 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL(`http://localhost:${process.env.PORT || 3000}`),
     title: "elizielx",
     description: "A Indonesian university student majoring in informatics and a full-stack developer.",
     openGraph: {
         title: "elizielx",
         siteName: "elizielx",
         description: "A Indonesian university student majoring in informatics and a full-stack developer.",
-        images: [
-            {
-                url: "/android-chrome-192x192.png",
-                width: 192,
-                height: 192,
-            },
-        ],
         locale: "en_US",
         type: "website",
     },
