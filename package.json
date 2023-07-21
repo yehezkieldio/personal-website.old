@@ -20,7 +20,7 @@
         "eslint": "8.45.0",
         "eslint-config-next": "latest",
         "framer-motion": "^10.12.16",
-        "next": "^13.4.10",
+        "next": "^13.4.11",
         "react": "latest",
         "react-dom": "latest",
         "react-icons": "^4.10.1",
