@@ -61,25 +61,36 @@
     }
     &--list {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         width: 100%;
 
         @include breakpoint(extra_small_devices) {
-            flex-direction: column;
+            flex-direction: row;
         }
     }
 }
 
 .contact-item {
-    flex-basis: calc(33.33% - 1rem);
+    flex-basis: 24rem;
+    height: 18rem;
     margin-bottom: 1rem;
     overflow: hidden;
     position: relative;
     border-radius: 0.75rem;
     border: solid 1px $slate;
     transition-duration: 700ms;
+
+    @include breakpoint(extra_small_devices) {
+        height: 18rem;
+    }
+
+    &:hover {
+        transform: translateY(-0.5rem);
+        background: lighten($color: $primary-background, $amount: 5);
+    }
 
     &--container {
         display: flex;
@@ -91,6 +102,12 @@
         padding: 4rem;
         padding-top: 4rem;
         padding-bottom: 8rem;
+
+        @include breakpoint(extra_small_devices) {
+            padding: 2rem;
+            padding-top: 4rem;
+            padding-bottom: 2rem;
+        }
     }
     &--icon {
         display: flex;
@@ -120,6 +137,10 @@
             font-family: $space-mono;
             letter-spacing: -0.025em;
             transition-duration: 150ms;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 1rem;
+            }
         }
         &-name {
             color: $primary-foreground;
@@ -128,6 +149,10 @@
             line-height: 1.75rem;
             font-weight: 300;
             text-decoration: underline;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 0.969rem;
+            }
         }
     }
 }
