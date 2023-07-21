@@ -18,7 +18,7 @@ export default function Main() {
                 <Link className="page-main--actions-item" href="https://github.com/elizielx">
                     GitHub
                 </Link>
-                <Link className="page-main--actions-item" href="https://github.com/elizielx">
+                <Link className="page-main--actions-item" href="https://resume.io/r/qYlIywOJ8">
                     Resume
                 </Link>
                 <Link className="page-main--actions-item" href="/contact">
