@@ -39,7 +39,7 @@
     &--seperator {
         width: 100%;
         height: 1px;
-        background: darken($color: $slate, $amount: 20);
+        background: $slate;
         margin-top: 4rem;
         margin-bottom: 4rem;
     }

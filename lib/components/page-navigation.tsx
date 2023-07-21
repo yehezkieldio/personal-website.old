@@ -1,8 +1,11 @@
 import Link from "next/link";
+import useScroll from "../hooks/use-on-scroll";
 
 export default function PageNavigation() {
+    const isScrolled = useScroll(0);
+
     return (
-        <nav className="page-navigation">
+        <nav className={`page-navigation ${isScrolled ? "is-scrolled" : ""}`}>
             <div className="page-navigation--container page-container">
                 <div className="page-navigation--content">
                     <Link className="page-navigation--content-item" href="/projects">

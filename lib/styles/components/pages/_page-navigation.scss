@@ -1,6 +1,4 @@
 .page-navigation {
-    background: $secondary-background;
-    border-bottom: 1px solid darken($color: $slate, $amount: 25);
     position: fixed;
     right: 0;
     left: 0;
@@ -8,6 +6,12 @@
     z-index: 50;
     transition-duration: 200ms;
     backdrop-filter: blur(8px);
+
+    &.is-scrolled {
+        border-bottom: 1px solid $slate;
+        background: transparent;
+        transition-duration: 500ms;
+    }
 
     &--container {
         padding: 1.5rem;
