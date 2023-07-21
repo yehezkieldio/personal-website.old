@@ -6,11 +6,14 @@ export default function PageFooter() {
     return (
         <footer className="page-footer">
             <p className="page-footer--content">
+                This website design is inspired by <Link href="https://www.stefanfmeyer.com/">stefanfmeyer</Link>.
+                <br />
+                The source code for this site is available on{" "}
+                <Link href="https://github.com/elizielx/eleutheria">GitHub</Link> under the MIT License.
+            </p>
+            <p className="page-footer--content">
                 Copyright © {currentYear} <span className="highlight">Yehezkiel Dio Sinolungan</span>. All Rights
                 Reserved.
-                {/* <br />
-                This website is open source and be found on{" "}
-                <Link href="https://github.com/elizielx/eleutheria">GitHub</Link>. */}
             </p>
         </footer>
     );

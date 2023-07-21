@@ -1,75 +1,35 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-interface PageNavigationProps {
-    title: string;
-    links: LinkItem[];
-}
-
-interface LinkItem {
-    title: string;
-    href: string;
-}
-
-export default function PageNavigation(props: React.PropsWithoutRef<PageNavigationProps>) {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleNavigationMenu = () => {
-        setIsOpen(!isOpen);
-    };
-
+export default function PageNavigation() {
     return (
-        <header className="page-navigation-header">
-            <nav className="page-navigation" role="navigation">
-                <div className="page-navigation--start">
-                    <Link href="/" className="page-navigation--start-item">
-                        {props.title}
+        <nav className="page-navigation">
+            <div className="page-navigation--container page-container">
+                <div className="page-navigation--content">
+                    <Link className="page-navigation--content-item" href="/projects">
+                        Projects
+                    </Link>
+                    <Link className="page-navigation--content-item" href="/contact">
+                        Contact
                     </Link>
                 </div>
-                <div className="page-navigation--end">
-                    {props.links.map((link) => (
-                        <Link href={link.href} key={link.href} className="page-navigation--end-item">
-                            {link.title}
-                        </Link>
-                    ))}
-                </div>
-                <div className="page-navigation--hamburger" onClick={toggleNavigationMenu}>
-                    <div className="page-navigation--hamburger-line"></div>
-                    <div className="page-navigation--hamburger-line"></div>
-                </div>
-                <AnimatePresence>
-                    {isOpen && (
-                        <motion.div
-                            className="page-navigation--overlay"
-                            initial={{ opacity: 0, y: -100 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -100 }}
-                            transition={{
-                                type: "tween",
-                            }}
-                        >
-                            <div className="page-navigation--overlay-exit" onClick={toggleNavigationMenu}>
-                                &#10005;
-                            </div>
-                            <div className="page-navigation--overlay-items">
-                                {props.links.map((link) => (
-                                    <Link
-                                        href={link.href}
-                                        key={link.href}
-                                        className="page-navigation--overlay-items-item"
-                                        onClick={() => {
-                                            setIsOpen(false);
-                                        }}
-                                    >
-                                        {link.title}
-                                    </Link>
-                                ))}
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </nav>
-        </header>
+                <Link className="arrow" href="/">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-6 h-6 "
+                    >
+                        <line x1="19" x2="5" y1="12" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </Link>
+            </div>
+        </nav>
     );
 }

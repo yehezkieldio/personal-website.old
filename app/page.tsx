@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function Index() {
+export default function Main() {
     return (
         <main className="page-main">
             <h1 className="page-main--title">elizielx</h1>

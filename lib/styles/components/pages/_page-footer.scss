@@ -19,6 +19,14 @@
             padding-right: 1rem;
         }
 
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                color: darken($color: $accent, $amount: 5);
+            }
+        }
+
         .highlight {
             color: $accent;
             font-weight: 300;

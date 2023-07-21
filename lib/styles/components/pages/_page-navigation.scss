@@ -1,119 +1,44 @@
-.page-navigation-header {
+.page-navigation {
     background: $secondary-background;
-    background-image: linear-gradient(to right, $primary-background, $secondary-background);
-    padding: 2rem;
+    border-bottom: 1px solid darken($color: $slate, $amount: 25);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    transition-duration: 200ms;
+    backdrop-filter: blur(8px);
 
-    @include breakpoint(extra_small_devices) {
-        padding: 2rem 1rem 2rem;
-    }
-
-    .page-navigation {
-        background: transparent;
+    &--container {
+        padding: 1.5rem;
         display: flex;
+        flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
+    }
 
-        &--start {
-            &-item {
-                text-transform: lowercase;
-                color: $primary-foreground;
+    &--content {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
 
-                &:hover,
-                &:active,
-                &:focus {
-                    color: $primary-foreground;
-                }
+        &-item {
+            color: $primary-foreground;
+            transition-duration: 500ms;
+            font-weight: 300;
+
+            &:hover {
+                color: lighten($color: $primary-foreground, $amount: 20);
             }
         }
+    }
 
-        &--end {
-            @include breakpoint(extra_small_devices) {
-                display: none;
-            }
+    .arrow {
+        color: $primary-foreground;
+        transition-duration: 500ms;
 
-            &-item {
-                text-decoration: underline;
-                letter-spacing: 0.5px;
-                margin-left: 2em;
-                text-transform: lowercase;
-                color: $primary-foreground;
-
-                &:hover,
-                &:active,
-                &:focus {
-                    color: lighten($color: $primary-foreground, $amount: 15);
-                    transition: color 0.2s ease-in-out;
-                }
-            }
-        }
-
-        &--hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-
-            @include breakpoint(extra_small_devices) {
-                display: flex;
-                align-items: center;
-                margin-left: auto;
-            }
-
-            &-line {
-                width: 25px;
-                height: 2px;
-                background-color: $accent;
-                margin-bottom: 5px;
-            }
-        }
-
-        &--overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: $primary-background;
-            display: flex;
-            justify-content: center;
-            z-index: 999;
-
-            &-exit {
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-            &-exit {
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-
-            &-items {
-                display: flex;
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-
-                &-item {
-                    text-decoration: underline;
-                    letter-spacing: 0.5px;
-                    text-transform: lowercase;
-                    color: $primary-foreground;
-                    margin-top: 24px;
-
-                    &:hover,
-                    &:active,
-                    &:focus {
-                        color: lighten($color: $primary-foreground, $amount: 15);
-                        transition: color 0.2s ease-in-out;
-                    }
-                }
-            }
+        &:hover {
+            color: lighten($color: $primary-foreground, $amount: 20);
         }
     }
 }

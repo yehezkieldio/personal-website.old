@@ -37,10 +37,24 @@ body {
 a {
     color: $accent;
     text-decoration: none;
+
+    &:hover {
+        color: darken($color: $accent, $amount: 5);
+    }
+}
+
+.wip {
+    color: #fbbf24;
+    font-weight: 300;
+    padding: 18px;
+    border: #fbbf24 solid 1px;
 }
 
 @import "./components/button";
+@import "./components/pages/page-container";
 @import "./components/pages/page-navigation";
 @import "./components/pages/page-main";
+@import "./components/pages/page-projects";
+@import "./components/pages/page-contact";
 @import "./components/pages/page-footer";
 @import "./components/pages/page-not-found";
