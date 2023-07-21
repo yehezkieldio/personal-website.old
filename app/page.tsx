@@ -7,7 +7,7 @@ export default function Main() {
         <main className="page-main">
             <h1 className="page-main--title">elizielx</h1>
             <p className="page-main--subtitle">
-                Hi, my name <span className="highlight">Yehezkiel Dio</span>, but you can call me{" "}
+                Hi, my name is <span className="highlight">Yehezkiel Dio</span>, but you can call me{" "}
                 <span className="highlight">Eliziel</span> or <span className="highlight">Liz</span>. I&apos;m a
                 full-stack dev from Indonesia.
             </p>
@@ -17,6 +17,9 @@ export default function Main() {
                 </Link>
                 <Link className="page-main--actions-item" href="https://github.com/elizielx">
                     GitHub
+                </Link>
+                <Link className="page-main--actions-item" href="https://github.com/elizielx">
+                    Resume
                 </Link>
                 <Link className="page-main--actions-item" href="/contact">
                     Contact
