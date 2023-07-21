@@ -40,9 +40,6 @@ a {
 }
 
 @import "./components/button";
-@import "./components/pages/page-container";
 @import "./components/pages/page-navigation";
-@import "./components/pages/page-base";
-@import "./components/contents/index";
-@import "./components/contents/about";
-@import "./components/contents/contact";
+@import "./components/pages/page-main";
+@import "./components/pages/page-footer";

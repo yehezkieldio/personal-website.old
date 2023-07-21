@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const variants = {
@@ -21,6 +20,8 @@ export default function PageTransition(props: React.PropsWithChildren<PageTransi
     return (
         <AnimatePresence>
             <motion.div
+                className="page-transition"
+                key="page-transition"
                 variants={variants}
                 initial="hidden"
                 animate="enter"
@@ -28,6 +29,7 @@ export default function PageTransition(props: React.PropsWithChildren<PageTransi
                 transition={{
                     type: "spring",
                     stiffness: 80,
+                    duration: 0.5,
                 }}
             >
                 {props.children}

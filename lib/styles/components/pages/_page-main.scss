@@ -1,0 +1,61 @@
+.page-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
+    &--title {
+        font-size: 5.5rem;
+        line-height: 1.2rem;
+        color: $accent;
+        padding: 1rem;
+        margin: 2.5rem;
+        margin-bottom: 1rem;
+
+        @include breakpoint(extra_small_devices) {
+            font-size: 4.5rem;
+        }
+    }
+    &--subtitle {
+        font-size: 0.895rem;
+        line-height: 1.75rem;
+        font-weight: 300;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        max-width: 700px;
+
+        @include breakpoint(extra_small_devices) {
+            font-size: 0.875rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    &--actions {
+        margin-top: 1.2rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        &-item {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            transition-duration: 500ms;
+            color: darken($color: $primary-foreground, $amount: 10);
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 0.844rem;
+            }
+
+            &:hover {
+                color: lighten($color: $primary-foreground, $amount: 20);
+            }
+        }
+    }
+
+    .highlight {
+        color: $accent;
+    }
+}

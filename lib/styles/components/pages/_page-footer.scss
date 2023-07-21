@@ -1,0 +1,27 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background: $secondary-background;
+    border-top: 1px solid darken($color: $slate, $amount: 25);
+
+    &--content {
+        font-size: 0.875rem;
+        line-height: 1.8;
+        font-weight: 200;
+
+        @include breakpoint(extra_small_devices) {
+            font-size: 0.75rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .highlight {
+            color: $accent;
+            font-weight: 300;
+        }
+    }
+}
