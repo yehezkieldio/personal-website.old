@@ -18,6 +18,10 @@
             line-height: 2.25rem;
             font-weight: 700;
             letter-spacing: -0.025em;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 1.75rem;
+            }
         }
         &-subtitle {
             font-size: 1rem;
@@ -26,6 +30,10 @@
             margin-bottom: 0;
             padding-bottom: 0;
             max-width: 700px;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 0.969rem;
+            }
         }
     }
     &--seperator {

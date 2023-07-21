@@ -4,4 +4,9 @@
     max-width: 80rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+
+    @include breakpoint(extra_small_devices) {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
 }

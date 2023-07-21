@@ -53,6 +53,12 @@ a {
     font-weight: 300;
     padding: 18px;
     border: #fbbf24 solid 1px;
+
+    @include breakpoint(extra_small_devices) {
+        font-size: 0.625rem;
+        text-align: center;
+        padding: 8px;
+    }
 }
 
 @import "./components/button";
