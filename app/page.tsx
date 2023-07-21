@@ -19,7 +19,7 @@ export default function Main() {
                     GitHub
                 </Link>
                 <Link className="page-main--actions-item" href="https://resume.io/r/qYlIywOJ8">
-                    Resume
+                    Résumé
                 </Link>
                 <Link className="page-main--actions-item" href="/contact">
                     Contact
