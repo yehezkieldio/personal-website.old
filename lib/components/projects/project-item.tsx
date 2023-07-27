@@ -12,10 +12,11 @@ export interface ProjectItemProps {
 }
 
 export default function ProjectItem(props: React.PropsWithChildren<ProjectItemProps>) {
+    const url = "/projects/" + props.url;
     return (
         <div className={`project-item ${props.isHighlight ? "highlight" : ""}`}>
             <PageTransition delay={props.delay}>
-                <Link className="project-item--container" href={props.url} target="_blank" rel="noreferrer nofollow">
+                <Link className="project-item--container" href={url} target="_blank" rel="noreferrer nofollow">
                     <div className="project-item--content">
                         <h2 className="project-item--content-title">{props.title}</h2>
                         <div className="project-item--content-tags">

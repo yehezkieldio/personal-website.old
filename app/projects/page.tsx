@@ -10,7 +10,7 @@ export default function Projects() {
             title: "Administrare",
             description:
                 "Administrare is a web application that aims to facilitate the management of internal data such as financial reports, office inventory, and and records archives of an organization.",
-            url: "#",
+            url: "administrare",
             tags: ["Next.js", "Nest.js", "FastAPI"],
             isHighlight: true,
         },
