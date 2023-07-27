@@ -1,9 +1,20 @@
 "use client";
 
 import PageTransition from "#/lib/components/page-transition";
-import Link from "next/link";
+import ProjectItem, { ProjectItemProps } from "#/lib/components/projects/project-item";
 
 export default function Projects() {
+    const projects: ProjectItemProps[] = [
+        {
+            delay: 0.5,
+            title: "Administrare",
+            description:
+                "Administrare is a web application that aims to facilitate the management of internal data such as financial reports, office inventory, and and records archives of an organization.",
+            url: "#",
+            tags: ["Next.js", "Nest.js", "FastAPI"],
+            isHighlight: true,
+        },
+    ];
     return (
         <main className="page-projects">
             <PageTransition key="page-projects--header" delay={0.5}>
@@ -16,8 +27,10 @@ export default function Projects() {
                 </header>
             </PageTransition>
             <div className="page-projects--seperator"></div>
-            <div className="page-projects-list">
-                <span className="wip">This section is still under construction. Please check back later.</span>
+            <div className="page-projects--list">
+                {projects.map((project, index) => (
+                    <ProjectItem key={project.title} {...project} />
+                ))}
             </div>
         </main>
     );

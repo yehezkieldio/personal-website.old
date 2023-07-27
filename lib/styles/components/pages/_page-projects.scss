@@ -43,4 +43,117 @@
         margin-top: 4rem;
         margin-bottom: 4rem;
     }
+
+    &--list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 8rem;
+
+        @include breakpoint(extra_small_devices) {
+            flex-direction: row;
+        }
+    }
+}
+
+.project-item {
+    flex-basis: 38rem;
+    height: 20rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.75rem;
+    border: solid 1px $slate;
+    transition-duration: 700ms;
+    margin-right: 0;
+
+    &.highlight {
+        flex: 1 0 100%;
+    }
+
+    @include breakpoint(extra_small_devices) {
+        height: 20rem;
+    }
+
+    &:hover {
+        transform: translateY(-0.5rem);
+        background: lighten($color: $primary-background, $amount: 5);
+    }
+
+    &--container {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        transition-duration: 700ms;
+        gap: 1rem;
+        position: relative;
+        padding: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 8rem;
+
+        @include breakpoint(extra_small_devices) {
+            padding: 1.5rem;
+            padding-top: 1.8rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &--content {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        z-index: 10;
+
+        &-title {
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: lighten($color: $primary-foreground, $amount: 25);
+            line-height: 1.75rem;
+            font-weight: 700;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 0.969rem;
+            }
+        }
+        &-tags {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+
+            &-tag {
+                padding: 0.4rem;
+                border-radius: 4px;
+                font-size: 0.75rem;
+                background: lighten($color: $primary-background, $amount: 2);
+            }
+        }
+        &-description {
+            color: $primary-foreground;
+            font-size: 0.969rem;
+            line-height: 1.8rem;
+            max-width: 900px;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 0.875rem;
+            }
+        }
+        &-read-more {
+            margin-top: 2rem;
+            text-decoration: underline;
+            transition-duration: 500ms;
+
+            @include breakpoint(extra_small_devices) {
+                display: none;
+                visibility: hidden;
+            }
+
+            &:hover {
+                color: lighten($color: $accent, $amount: 20);
+            }
+        }
+    }
 }
