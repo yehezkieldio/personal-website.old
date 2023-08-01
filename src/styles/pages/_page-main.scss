@@ -46,6 +46,10 @@
                 font-weight: 400;
                 text-decoration: none;
 
+                @include breakpoint(extra_small_devices) {
+                    font-size: 0.938em;
+                }
+
                 svg {
                     overflow: hidden;
                     vertical-align: middle;
@@ -56,6 +60,10 @@
                     animation-duration: 0.5s;
                     animation-iteration-count: infinite;
                     animation-direction: alternate;
+
+                    @include breakpoint(extra_small_devices) {
+                        width: 90px;
+                    }
                 }
 
                 &:hover {

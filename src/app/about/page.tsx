@@ -4,8 +4,9 @@ export default function About() {
     return (
         <main className="page-about">
             <div className="page-container">
-                About - Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quam eaque? Fugit necessitatibus
-                sed doloribus ex eveniet quod.
+                <article className="uc">
+                    <h1>This page is under construction. Please check back later.</h1>
+                </article>
             </div>
         </main>
     );
