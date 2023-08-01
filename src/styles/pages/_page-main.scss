@@ -1,30 +1,73 @@
 .page-main {
     display: flex;
-    min-height: 100vh;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
 
-    .main-content {
+    .page-main-content {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+
         margin-right: 1rem;
         margin-left: 1rem;
+        margin-bottom: 4rem;
 
-        .page-content {
-            .content-title {
+        article {
+            h1 {
                 font-size: 2.275rem;
                 font-weight: 600;
                 margin: 2rem 0 1.5rem;
                 text-transform: uppercase;
                 letter-spacing: 9.9px;
+
+                @include breakpoint(extra_small_devices) {
+                    font-size: 1.4rem;
+                }
             }
-            .content-description {
+            p {
                 color: $foreground-secondary;
                 font-size: 0.931rem;
                 line-height: 2.3;
                 font-weight: 400;
+
+                @include breakpoint(extra_small_devices) {
+                    font-size: 0.806rem;
+                }
             }
         }
+        div {
+            a {
+                color: lighten($color: $foreground-secondary, $amount: 5);
+                line-height: 2.3;
+                font-weight: 400;
+                text-decoration: none;
+
+                svg {
+                    overflow: hidden;
+                    vertical-align: middle;
+                    fill: lighten($color: $foreground-secondary, $amount: 5);
+                    margin-left: 1rem;
+
+                    animation-name: foward;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@keyframes foward {
+    0% {
+        margin-left: 1rem;
+    }
+    100% {
+        margin-left: 2rem;
     }
 }
