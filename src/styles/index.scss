@@ -35,6 +35,10 @@ body {
     transition-duration: 700ms;
 }
 
+.highlight {
+    color: $accent;
+}
+
 @import "components/page-container";
 @import "components/button";
 

@@ -10,9 +10,19 @@ export default function Main() {
                     <article>
                         <h1>I&apos;M YEHEZKIEL DIO</h1>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet sapiente culpa pariatur,
-                            nam rem nostrum, distinctio, omnis placeat eligendi dignissimos labore magnam saepe
-                            exercitationem voluptate est aperiam sit!
+                            Hi, my name is <span className="highlight">Yehezkiel Dio</span>, but you can call me{" "}
+                            <span className="highlight">Eliziel</span> or <span className="highlight">Liz</span>.
+                            I&apos;m a student at <span className="highlight">Universitas Mulia</span> majoring in{" "}
+                            <span className="highlight">Informatics</span> and a self-taught full-stack developer from
+                            Indonesia.
+                        </p>
+                        <p>
+                            I have been programming for 5 years now, and I have an interest in{" "}
+                            <span className="highlight">web development</span> and{" "}
+                            <span className="highlight">software architecture</span>. I&apos;ve mostly worked with{" "}
+                            <span className="highlight">TypeScript</span> in the past, but I&apos;m also familiar with{" "}
+                            <span className="highlight">PHP</span> while also currently learning{" "}
+                            <span className="highlight">Go</span>.
                         </p>
                     </article>
                     <div>
@@ -28,6 +38,10 @@ export default function Main() {
                                 <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path>
                             </svg>
                         </Link>
+                    </div>
+                    <div>
+                        <Link href="/projects">Projects</Link>
+                        <Link href="/projects">Contact</Link>
                     </div>
                 </div>
             </div>

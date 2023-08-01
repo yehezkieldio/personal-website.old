@@ -14,7 +14,8 @@ export default function TemplateBase(props: TemplateBaseProps) {
     let pathname = usePathname();
 
     // Hide page navigation on the home page
-    const isPageNavigationVisible = pathname.startsWith("/projects") || pathname === "/contact";
+    const isPageNavigationVisible =
+        pathname.startsWith("/projects") || pathname === "/contact" || pathname === "/about";
 
     return (
         <>
