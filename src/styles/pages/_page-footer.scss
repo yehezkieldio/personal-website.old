@@ -1,0 +1,30 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background: $background-secondary;
+    border-top: 1px solid $slate;
+
+    .page-footer-content {
+        font-size: 0.875rem;
+        line-height: 1.8;
+        font-weight: 200;
+
+        a {
+            color: $accent;
+            text-decoration: underline;
+
+            &:hover {
+                color: lighten($color: $accent, $amount: 10);
+            }
+        }
+
+        @include breakpoint(extra_small_devices) {
+            font-size: 0.7rem;
+            padding-left: 0.875rem;
+            padding-right: 0.875rem;
+        }
+    }
+}
