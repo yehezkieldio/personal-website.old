@@ -41,7 +41,7 @@ export default function Main() {
                     </div>
                     <div>
                         <Link href="/projects">Projects</Link>
-                        <Link href="/projects">Contact</Link>
+                        <Link href="/contact">Contact</Link>
                     </div>
                 </div>
             </div>

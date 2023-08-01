@@ -8,6 +8,9 @@ export default function PageNavigation() {
         <nav className={`page-navigation ${isScrolled ? "page-navigation--sticky" : ""}`}>
             <div className="page-container">
                 <div className="page-navigation-content">
+                    <Link className="page-navigation--content-item" href="/about">
+                        About
+                    </Link>
                     <Link className="page-navigation--content-item" href="/projects">
                         Projects
                     </Link>
