@@ -39,6 +39,7 @@
         div {
             a {
                 color: lighten($color: $foreground-secondary, $amount: 5);
+                font-family: $space-mono;
                 line-height: 2.3;
                 font-weight: 400;
                 text-decoration: none;

@@ -17,7 +17,7 @@ export default function Main() {
                     </article>
                     <div>
                         <Link href="/about">
-                            More About Me{" "}
+                            More About Me
                             <svg
                                 width="114"
                                 height="24"
