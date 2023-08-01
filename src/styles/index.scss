@@ -39,8 +39,10 @@ body {
     color: $accent;
 }
 
+@import "components/page-navigation";
 @import "components/page-container";
+@import "components/page-footer";
 @import "components/button";
 
 @import "pages/page-main";
-@import "pages/page-footer";
+@import "pages/page-about";

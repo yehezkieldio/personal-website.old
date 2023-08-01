@@ -21,7 +21,7 @@ export default function Main() {
                             <span className="highlight">web development</span> and{" "}
                             <span className="highlight">software architecture</span>. I&apos;ve mostly worked with{" "}
                             <span className="highlight">TypeScript</span> in the past, but I&apos;m also familiar with{" "}
-                            <span className="highlight">PHP</span> while also currently learning{" "}
+                            <span className="highlight">PHP</span> and also currently learning{" "}
                             <span className="highlight">Go</span>.
                         </p>
                     </article>

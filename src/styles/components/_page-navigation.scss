@@ -1,0 +1,47 @@
+.page-navigation {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    transition-duration: 200ms;
+    backdrop-filter: blur(8px);
+
+    &--sticky {
+        border-bottom: 1px solid $slate;
+        background: transparent;
+        transition-duration: 500ms;
+    }
+
+    .page-container {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-navigation-content {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+
+        a {
+            color: $foreground-secondary;
+            text-decoration: none;
+            transition-duration: 500ms;
+            font-weight: 300;
+
+            &:hover {
+                color: lighten($color: $foreground-secondary, $amount: 20);
+            }
+        }
+    }
+    .arrow {
+        color: $foreground-secondary;
+
+        &:hover {
+            color: lighten($color: $foreground-secondary, $amount: 20);
+        }
+    }
+}
