@@ -1,6 +1,7 @@
 "use client";
 
 import ContactItem, { ContactItemProps } from "#/src/components/contact-item";
+import PageTransition from "#/src/components/page-transition";
 
 export default function Contact() {
     const contacts: ContactItemProps[] = [
@@ -37,10 +38,12 @@ export default function Contact() {
     return (
         <main className="page-contact">
             <div className="page-container">
-                <header>
-                    <h1>Contact</h1>
-                    <p>Get in touch with me through my social media or email me anytime.</p>
-                </header>
+                <PageTransition delay={0.5}>
+                    <header>
+                        <h1>Contact</h1>
+                        <p>Get in touch with me through my social media or email me anytime.</p>
+                    </header>
+                </PageTransition>
                 <div className="seperator"></div>
                 <article>
                     {contacts.map((contact) => (

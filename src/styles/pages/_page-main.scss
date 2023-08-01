@@ -14,6 +14,13 @@
         margin-bottom: 4rem;
 
         article {
+            div {
+                margin-top: 0;
+            }
+            div + div {
+                display: block;
+            }
+
             h1 {
                 font-size: 2.275rem;
                 font-weight: 600;
