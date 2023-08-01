@@ -1,8 +1,8 @@
 "use client";
 
 import { ReactNode } from "react";
-import PageTransition from "./page-transition";
 import { usePathname } from "next/navigation";
+import PageTransition from "./page-transition";
 import PageFooter from "./page-footer";
 import PageNavigation from "./page-navigation";
 
@@ -11,7 +11,7 @@ interface TemplateBaseProps {
 }
 
 export default function TemplateBase(props: TemplateBaseProps) {
-    const pathname = usePathname();
+    let pathname = usePathname();
 
     // Hide page navigation on the home page
     const isPageNavigationVisible = pathname.startsWith("/projects") || pathname === "/contact";
@@ -19,7 +19,7 @@ export default function TemplateBase(props: TemplateBaseProps) {
     return (
         <>
             {isPageNavigationVisible && <PageNavigation />}
-            <PageTransition key={pathname}>{props.children}</PageTransition>
+            <PageTransition>{props.children}</PageTransition>
             <PageFooter />
         </>
     );

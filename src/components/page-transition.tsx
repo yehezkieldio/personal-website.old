@@ -15,7 +15,6 @@ const variants = {
 interface PageTransitionProps {
     children: React.ReactNode;
     delay?: number;
-    key?: string;
 }
 
 export default function PageTransition(props: React.PropsWithChildren<PageTransitionProps>) {
@@ -23,7 +22,7 @@ export default function PageTransition(props: React.PropsWithChildren<PageTransi
         <AnimatePresence>
             <motion.div
                 className="page-transition"
-                key={props.key || "page-transition"}
+                key="page-transition"
                 variants={variants}
                 initial="hidden"
                 animate="enter"
