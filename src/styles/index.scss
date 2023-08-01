@@ -39,6 +39,15 @@ body {
     color: $accent;
 }
 
+a {
+    color: $accent;
+    text-decoration: none;
+
+    &:hover {
+        color: darken($color: $accent, $amount: 5);
+    }
+}
+
 .uc {
     h1 {
         font-size: 1rem;
