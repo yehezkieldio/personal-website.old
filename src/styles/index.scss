@@ -1,0 +1,69 @@
+@import "variables";
+@import "mixins";
+
+*,
+*::before,
+*::after {
+    border-width: 0;
+    border-style: solid;
+
+    box-sizing: border-box;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    color: $foreground-primary;
+    line-height: 1.45;
+
+    @include breakpoint(extra_large_devices) {
+        border: 1em solid linear-gradient(to right, $background-primary, $background-secondary);
+    }
+}
+
+html,
+body {
+    font-family: $be-vietnam-pro;
+    font-feature-settings: "kern";
+    background: $background-primary;
+    transition-duration: 700ms;
+}
+
+.highlight {
+    color: $accent;
+}
+
+a {
+    color: $accent;
+    text-decoration: none;
+
+    &:hover {
+        color: darken($color: $accent, $amount: 5);
+    }
+}
+
+.uc {
+    h1 {
+        font-size: 1rem;
+        line-height: 2.3;
+        color: $foreground-secondary;
+        font-weight: 200;
+        text-align: center;
+    }
+}
+
+@import "components/page-navigation";
+@import "components/page-container";
+@import "components/page-footer";
+@import "components/button";
+
+@import "pages/page-main";
+@import "pages/page-about";
+@import "pages/page-projects";
+@import "pages/page-contact";

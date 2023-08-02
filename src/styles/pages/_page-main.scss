@@ -1,0 +1,96 @@
+.page-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    .page-main-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 4rem;
+
+        article {
+            div {
+                margin-top: 0;
+            }
+            div + div {
+                display: block;
+            }
+
+            h1 {
+                font-size: 2.275rem;
+                font-weight: 600;
+                margin: 2rem 0 1.5rem;
+                text-transform: uppercase;
+                letter-spacing: 9.9px;
+
+                @include breakpoint(extra_small_devices) {
+                    font-size: 1.4rem;
+                }
+            }
+            p {
+                color: $foreground-secondary;
+                font-size: 0.931rem;
+                line-height: 2.3;
+                font-weight: 400;
+                max-width: 1000px;
+
+                @include breakpoint(extra_small_devices) {
+                    font-size: 0.806rem;
+                }
+            }
+        }
+        div {
+            margin-top: 1rem;
+            a {
+                color: lighten($color: $foreground-secondary, $amount: 5);
+                font-family: $space-mono;
+                line-height: 2.3;
+                font-weight: 400;
+                text-decoration: none;
+
+                @include breakpoint(extra_small_devices) {
+                    font-size: 0.938em;
+                }
+
+                svg {
+                    overflow: hidden;
+                    vertical-align: middle;
+                    fill: lighten($color: $foreground-secondary, $amount: 5);
+                    margin-left: 1rem;
+
+                    animation-name: foward;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+
+                    @include breakpoint(extra_small_devices) {
+                        width: 90px;
+                    }
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        div + div {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+}
+
+@keyframes foward {
+    0% {
+        margin-left: 1rem;
+    }
+    100% {
+        margin-left: 2rem;
+    }
+}

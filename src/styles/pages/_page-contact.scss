@@ -1,0 +1,137 @@
+.page-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    min-height: 100vh;
+
+    padding-top: 6rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+
+    header {
+        max-width: 42rem;
+
+        h1 {
+            font-size: 1.875rem;
+            color: lighten($color: $foreground-primary, $amount: 25);
+            line-height: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 1.75rem;
+            }
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.75rem;
+            color: $foreground-secondary;
+            font-weight: 300;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            max-width: 700px;
+
+            @include breakpoint(extra_small_devices) {
+                font-size: 0.969rem;
+            }
+        }
+    }
+
+    .seperator {
+        width: 100%;
+        height: 1px;
+        background: $slate;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    article {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @include breakpoint(extra_small_devices) {
+            flex-direction: row;
+        }
+    }
+}
+
+.contact-item {
+    flex-basis: 22rem;
+    height: 18rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.75rem;
+    border: solid 1px $slate;
+    transition-duration: 700ms;
+
+    @include breakpoint(extra_small_devices) {
+        height: 18rem;
+    }
+
+    .item-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition-duration: 700ms;
+        gap: 1rem;
+        position: relative;
+        padding: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 8rem;
+
+        .icon {
+            display: flex;
+            position: relative;
+            z-index: 10;
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            border: solid 1px $slate;
+            width: 3rem;
+            height: 3rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            transition-duration: 1000ms;
+        }
+        .item-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+
+            span:first-child {
+                font-size: 1.25rem;
+                color: lighten($color: $foreground-primary, $amount: 25);
+                line-height: 2.25rem;
+                font-weight: 400;
+                font-family: $space-mono;
+                letter-spacing: -0.025em;
+                transition-duration: 150ms;
+
+                @include breakpoint(extra_small_devices) {
+                    font-size: 1rem;
+                }
+            }
+            span:nth-child(2) {
+                color: $foreground-secondary;
+                margin-top: 1rem;
+                font-size: 1rem;
+                line-height: 1.75rem;
+                font-weight: 300;
+                text-decoration: underline;
+
+                @include breakpoint(extra_small_devices) {
+                    font-size: 0.969rem;
+                }
+            }
+        }
+    }
+}
+.contact-item:first-child {
+    flex-basis: 100%;
+}
