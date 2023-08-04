@@ -1,49 +1,44 @@
 "use client";
 
+import { useState } from "react";
 import ProjectItem, { ProjectItemProps } from "#/src/components/project-item";
 import PageTransition from "#/src/components/page-transition";
-import { useState } from "react";
 import Filter from "#/src/components/filter";
-import FilterButton from "#/src/components/filter-button";
 
 export default function Projects() {
-    const [activeFilter, setActiveFilter] = useState("all");
-    const buttons = [{ text: "All", category: "all" }];
-    const categories = ["all", "open-source", "closed-source"];
-    const filteredButtons =
-        activeFilter === "all" ? buttons : buttons.filter((button) => button.category === activeFilter);
+    const [activeFilter, setActiveFilter] = useState("All");
+    const categories = ["All", "Open Source"];
 
     const projects: ProjectItemProps[] = [
         {
             name: "Administrare",
-            summary: "A website application with the aim of managing an organization's office inventory.",
-            description: "N/A",
-            technologies: ["React", "TypeScript", "Node.js", "Python", "FastAPI", "MongoDB"],
-            url: {
-                image: "https://irswanda.com/img/project/inventory-management.png",
-                github: "https://github.com/astrantialabs/administrare",
+            summary: "Web application that aims to facilitate the management of an organization's office inventory.",
+            description:
+                "Administrare is a website-based application that aims to facilitate the management of internal data such as financial reports, office inventory, and records archives of an organization.",
+            filters: [""],
+            technologies: ["React", "TypeScript", "Next.js", "Nest.js", "Python", "FastAPI", "MongoDB"],
+            urls: {
+                image: "/projects/administrare.png",
             },
-            filters: ["open-source"],
         },
         {
-            name: "Placeholder Closed Source",
-            summary: "Placeholder 2",
-            description: "N/A",
-            technologies: ["React", "TypeScript", "Node.js", "Python", "FastAPI", "MongoDB"],
-            url: {
-                image: "https://irswanda.com/img/project/inventory-management.png",
+            name: "Finance Recap",
+            summary: "Web application for the purpose of viewing an organization's Excel financial report on the web.",
+            description:
+                "Finance Recap is a website-based application that aims to extract data in an excel spreadsheet to be manipulated and displayed on the website.",
+            filters: [""],
+            technologies: ["PHP", "Laravel", "Python", "FastAPI", "MongoDB"],
+            urls: {
+                image: "/projects/finance-recap.png",
             },
-            filters: ["closed-source"],
         },
         {
-            name: "Placeholder Open Source",
-            summary: "Placeholder 2",
-            description: "N/A",
-            technologies: ["React", "TypeScript", "Node.js", "Python", "FastAPI", "MongoDB"],
-            url: {
-                image: "https://irswanda.com/img/project/inventory-management.png",
-            },
-            filters: ["open-source"],
+            name: "Placeholder",
+            summary: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis cupiditate eum.",
+            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+            filters: ["Open Source"],
+            technologies: ["Next.js"],
+            urls: {},
         },
     ];
 
@@ -59,10 +54,9 @@ export default function Projects() {
                 <div className="seperator"></div>
                 <article>
                     <Filter categories={categories} activeFilter={activeFilter} onFilterChange={setActiveFilter} />
-                    {void console.log(activeFilter)}
                     <div className="project-items">
                         {projects
-                            .filter((project) => activeFilter === "all" || project.filters?.includes(activeFilter))
+                            .filter((project) => activeFilter === "All" || project.filters?.includes(activeFilter))
                             .map((project) => (
                                 <ProjectItem key={project.name} {...project} />
                             ))}

@@ -1,7 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-import PageTransition from "./page-transition";
-
 export interface FilterProps {
     categories: string[];
     activeFilter: string;
@@ -14,7 +10,9 @@ export default function Filter(props: React.PropsWithChildren<FilterProps>) {
             {props.categories.map((category) => (
                 <button
                     key={category}
-                    className={category === props.activeFilter ? "button button-solid active" : "button button-solid "}
+                    className={
+                        category === props.activeFilter ? "button button--filter active" : "button button--filter "
+                    }
                     onClick={() => props.onFilterChange(category)}
                 >
                     {category}

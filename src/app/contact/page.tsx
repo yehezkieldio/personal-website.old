@@ -14,7 +14,7 @@ export default function Contact() {
         },
         {
             delay: 0.6,
-            handle: "@yhezkiel.dio",
+            handle: "yhezkiel.dio",
             name: "Instagram",
             url: "https://www.instagram.com/yhezkiel.dio",
             iconPath: "/svgs/instagram.svg",

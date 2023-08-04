@@ -87,6 +87,24 @@ $button-duration: 150ms;
         @include button-solid;
     }
 
+    &--filter {
+        @include button-solid;
+        background-color: transparent;
+        color: $foreground-primary;
+        font-weight: 500;
+        transition-duration: 500ms;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &.active {
+            background-color: $slate;
+            color: $foreground-primary;
+            font-weight: 600;
+        }
+    }
+
     &--ghost {
         @include button-ghost;
     }
