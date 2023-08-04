@@ -4,6 +4,7 @@ import { useState } from "react";
 import ProjectItem, { ProjectItemProps } from "#/src/components/project-item";
 import PageTransition from "#/src/components/page-transition";
 import Filter from "#/src/components/filter";
+import Link from "next/link";
 
 export default function Projects() {
     const [activeFilter, setActiveFilter] = useState("All");
@@ -60,6 +61,12 @@ export default function Projects() {
                             .map((project) => (
                                 <ProjectItem key={project.name} {...project} />
                             ))}
+                    </div>
+                    <div className="github">
+                        <p>
+                            View more of my projects or other stuff on my{" "}
+                            <Link href="https://github.com/elizielx">GitHub</Link>.
+                        </p>
                     </div>
                 </article>
             </div>
