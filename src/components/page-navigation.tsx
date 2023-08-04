@@ -1,22 +1,37 @@
-import useScroll from "../hooks/use-on-scroll";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
+import useScroll from "../hooks/use-on-scroll";
 
 export default function PageNavigation() {
     const isScrolled = useScroll(0);
+    const currentPage = usePathname();
+
+    const pages = [
+        {
+            name: "About",
+            url: "/about",
+        },
+        {
+            name: "Projects",
+            url: "/projects",
+        },
+        {
+            name: "Contact",
+            url: "/contact",
+        },
+    ];
+
+    const filteredPages = pages.filter((page) => page.url !== currentPage);
 
     return (
         <nav className={`page-navigation ${isScrolled ? "page-navigation--sticky" : ""}`}>
             <div className="page-container">
                 <div className="page-navigation-content">
-                    <Link className="page-navigation--content-item" href="/about">
-                        About
-                    </Link>
-                    <Link className="page-navigation--content-item" href="/projects">
-                        Projects
-                    </Link>
-                    <Link className="page-navigation--content-item" href="/contact">
-                        Contact
-                    </Link>
+                    {filteredPages.map((page) => (
+                        <Link key={page.name} className="page-navigation--content-item" href={page.url}>
+                            {page.name}
+                        </Link>
+                    ))}
                 </div>
                 <Link className="arrow" href="/">
                     <svg
