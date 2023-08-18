@@ -8,7 +8,7 @@ export default function PageFooter() {
             <div className="page-footer-content">
                 <p className="open-source">
                     The source code for this site is available on{" "}
-                    <Link href="https://github.com/elizielx/eleutheria" target="_blank" rel="noreferrer nofollow">
+                    <Link href="https://github.com/elizielx/personal-website" target="_blank" rel="noreferrer nofollow">
                         GitHub
                     </Link>{" "}
                     under the MIT License.

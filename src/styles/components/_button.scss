@@ -73,11 +73,36 @@ $button-duration: 150ms;
     }
 }
 
+.buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
 .button {
     @include button-base;
 
     &--solid {
         @include button-solid;
+    }
+
+    &--filter {
+        @include button-solid;
+        background-color: transparent;
+        color: $foreground-primary;
+        font-weight: 500;
+        transition-duration: 500ms;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &.active {
+            background-color: $slate;
+            color: $foreground-primary;
+            font-weight: 600;
+        }
     }
 
     &--ghost {
