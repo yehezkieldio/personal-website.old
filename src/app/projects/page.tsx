@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Projects() {
     const [activeFilter, setActiveFilter] = useState("All");
-    const categories = ["All", "Open Source"];
+    const categories = ["All"];
 
     const projects: ProjectItemProps[] = [
         {
@@ -32,14 +32,6 @@ export default function Projects() {
             urls: {
                 image: "/projects/finance-recap.png",
             },
-        },
-        {
-            name: "Placeholder",
-            summary: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis cupiditate eum.",
-            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-            filters: ["Open Source"],
-            technologies: ["Next.js"],
-            urls: {},
         },
     ];
 
