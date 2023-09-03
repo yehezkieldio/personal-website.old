@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Projects() {
     const [activeFilter, setActiveFilter] = useState("All");
-    const categories = ["All"];
+    const categories = ["All", "Open Source"];
 
     const projects: ProjectItemProps[] = [
         {
@@ -31,6 +31,18 @@ export default function Projects() {
             technologies: ["PHP", "Laravel", "Python", "FastAPI", "MongoDB"],
             urls: {
                 image: "/projects/finance-recap.png",
+            },
+        },
+        {
+            name: "Navia",
+            summary:
+                "Navia is here as yet another multipurpose Discord bot, there's already a lot of them - but why not more?",
+            description:
+                "Navia is here as yet another multipurpose Discord bot, there's already a lot of them - but why not more? Built with TypeScript and utilizes the Sapphire framework.",
+            filters: ["Open Source"],
+            technologies: ["TypeScript", "Discord.js"],
+            urls: {
+                image: "/projects/navia.png",
             },
         },
     ];
