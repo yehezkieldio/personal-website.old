@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro, Space_Mono } from "next/font/google";
+import { Be_Vietnam_Pro, Martian_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -13,17 +13,17 @@ const beVietnamPro = Be_Vietnam_Pro({
     display: "swap",
     variable: "--font-be-vietnam-pro",
 });
-const spaceMono = Space_Mono({
+const martianMono = Martian_Mono({
     subsets: ["latin"],
     weight: ["400", "700"],
     variable: "--font-space-mono",
 });
-import "../styles/index.scss";
+import "./globals.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={`${beVietnamPro.variable} ${spaceMono.variable}`}>
+            <body className={`${beVietnamPro.variable} ${martianMono.variable}`}>
                 {children}
                 <Analytics />
             </body>
