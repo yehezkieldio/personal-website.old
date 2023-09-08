@@ -15,8 +15,8 @@ export default function Main() {
             </p>
             <p>
                 My real name is <strong>Yehezkiel Dio</strong>, but I prefer the name <strong>Eliziel</strong> or{" "}
-                <strong>Liz</strong> on the internet. <br />
-                Yehezkiel is Ezekiel in Bahasa Indonesia.
+                <strong>Liz</strong> on the internet. 
+                <br />Yehezkiel is Ezekiel in Bahasa Indonesia.
             </p>
             <p>
                 I have been programming for at least 5 years now, with some experiences as a freelancer and an intern.

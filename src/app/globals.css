@@ -12,9 +12,13 @@ body {
     @apply font-sans prose prose-sm prose-h1:text-aztec-100 prose-h1:text-3xl;
     @apply prose-p:text-aztec-200 prose-p:font-light;
     @apply prose-strong:text-aztec-200 prose-strong:font-semibold;
-    @apply prose-a:text-aztec-100 prose-p:font-light prose-a:decoration-aztec-900;
+    @apply prose-a:text-aztec-100 prose-p:font-light prose-a:decoration-aztec-500;
     @apply prose-hr:mb-8 prose-hr:border-aztec-800;
     @apply prose-h1:text-aztec-100 prose-h1:text-2xl prose-h1:font-semibold;
+
+    a {
+        @apply hover:text-aztec-300;
+    }
 
     em {
         @apply text-sm;
@@ -26,7 +30,7 @@ body {
     }
 
     .nav-line {
-        @apply prose-a:text-aztec-200 prose-a:font-normal prose-a:decoration-aztec-900;
+        @apply prose-a:text-aztec-200 prose-a:font-normal prose-a:decoration-aztec-500;
         @apply mb-8 flex flex-row items-center content-end gap-3 text-right;
 
         a {

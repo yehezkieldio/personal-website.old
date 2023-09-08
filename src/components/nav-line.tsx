@@ -1,4 +1,5 @@
 "use client";
+
 import { usePathname } from "next/navigation";
 
 const NavItem = ({ href, label }: { href: string; label: string }) => {
@@ -23,7 +24,7 @@ export const NavLine = () => {
     const links = [
         { href: "/", label: "About" },
         { href: "/stack", label: "Tech Stack" },
-        { href: "/Portfolio", label: "Portfolio" },
+        { href: "/portfolio", label: "Portfolio" },
     ];
 
     return (

@@ -2,10 +2,10 @@
 
 import { NavLine } from "#/src/components/nav-line";
 
-export default function Stack() {
+export default function Portfolio() {
     return (
         <article className="container">
-            <h1>Tech Stack</h1>
+            <h1>Portfolio</h1>
             <NavLine />
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias nobis pariatur, commodi autem
