@@ -5,6 +5,7 @@ const nextConfig = {
     reactStrictMode: true,
     cleanDistDir: true,
     images: {
+        dangerouslyAllowSVG: true,
         domains: ["localhost"],
         remotePatterns: [
             {
@@ -12,6 +13,16 @@ const nextConfig = {
                 hostname: "irswanda.com",
                 port: "",
                 pathname: "/img/project/**",
+            },
+            {
+                protocol: "https",
+                hostname: "img.shields.io",
+                port: "",
+            },
+            {
+                protocol: "https",
+                hostname: "cdn.simpleicons.org",
+                port: "",
             },
         ],
     },

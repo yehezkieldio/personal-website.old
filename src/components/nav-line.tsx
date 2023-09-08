@@ -20,13 +20,13 @@ const NavItem = ({ href, label }: { href: string; label: string }) => {
     );
 };
 
-export const NavLine = () => {
-    const links = [
-        { href: "/", label: "About" },
-        { href: "/stack", label: "Tech Stack" },
-        { href: "/portfolio", label: "Portfolio" },
-    ];
+const links = [
+    { href: "/", label: "About" },
+    { href: "/stack", label: "Tech Stack" },
+    { href: "/portfolio", label: "Portfolio" },
+];
 
+export const NavLine = () => {
     return (
         <div className="nav-container">
             <div className="nav-line">
