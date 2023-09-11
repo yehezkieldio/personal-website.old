@@ -6,6 +6,17 @@ export const Technologies = ({ tag, technologies }: { tag: string; technologies:
     const isDarkLogo = (technology: string) =>
         ["next.js", "express", "fastify", "apachekafka", "goland"].includes(technology.toLowerCase());
 
+    const technologyNameMapping: { [key: string]: string } = {
+        apachekafka: "apache kafka",
+        visualstudiocode: "visual studio code",
+        githubactions: "gitHub actions",
+    };
+
+    const formatTechnologyName = (technology: string) => {
+        const lowercaseTech = technology.toLowerCase();
+        return technologyNameMapping[lowercaseTech] || lowercaseTech;
+    };
+
     return (
         <div className="tech-stack" id={sluggify(tag)}>
             <h2>{tag}</h2>
@@ -18,7 +29,7 @@ export const Technologies = ({ tag, technologies }: { tag: string; technologies:
                             width={20}
                             height={20}
                         />
-                        <span>{technology.toLowerCase()}</span>
+                        <span>{formatTechnologyName(technology)}</span>
                     </div>
                 ))}
             </div>
