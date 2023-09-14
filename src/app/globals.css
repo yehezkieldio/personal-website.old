@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-aztec-950 text-aztec-200 pl-4 pr-2;
+}
+
+.container {
+    @apply w-auto ml-auto mr-auto block;
+    @apply pt-8 pb-16 md:pt-20 md:pb-32;
+    @apply font-sans prose prose-sm prose-h1:text-aztec-100 prose-h1:text-3xl;
+    @apply prose-p:text-aztec-200 prose-p:font-light;
+    @apply prose-strong:text-aztec-200 prose-strong:font-semibold;
+    @apply prose-a:text-aztec-100 prose-p:font-light prose-a:decoration-aztec-500;
+    @apply prose-hr:mb-8 prose-hr:border-aztec-800;
+    @apply prose-h1:text-aztec-100 prose-h1:text-2xl prose-h1:font-semibold;
+
+    a {
+        @apply hover:text-aztec-300;
+    }
+
+    em {
+        @apply text-sm;
+    }
+
+    .nav-container {
+        @apply flex justify-end;
+    }
+
+    .nav-line {
+        @apply prose-a:text-aztec-200 prose-a:font-normal prose-a:decoration-aztec-500;
+        @apply mb-8 flex flex-row items-center content-end gap-3 text-right;
+
+        a {
+            @apply hover:text-aztec-300;
+        }
+        span {
+            @apply text-aztec-800;
+        }
+    }
+}
+
+.stack-container {
+    @apply flex flex-wrap;
+
+    .tech-stack {
+        @apply flex basis-full flex-col gap-2;
+    }
+
+    h2 {
+        @apply text-sm text-aztec-200 font-light;
+    }
+
+    .tech-stack + .tech-stack {
+        @apply mt-6;
+    }
+
+    .technologies {
+        @apply flex flex-wrap flex-row content-evenly items-center gap-2;
+    }
+
+    .technology {
+        @apply flex flex-row items-center gap-2 flex-grow;
+        @apply min-w-[24px] h-12 p-2;
+        @apply text-aztec-100;
+        /* @apply border-b border-aztec-800; */
+
+        span {
+            @apply font-mono text-xs tracking-wide font-light;
+        }
+    }
+}
