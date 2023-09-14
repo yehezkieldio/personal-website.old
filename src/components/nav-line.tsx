@@ -23,7 +23,7 @@ const NavItem = ({ href, label }: { href: string; label: string }) => {
 const links = [
     { href: "/", label: "About" },
     { href: "/stack", label: "Tech Stack" },
-    { href: "/portfolio", label: "Portfolio" },
+    // { href: "/portfolio", label: "Portfolio" },
 ];
 
 export const NavLine = () => {

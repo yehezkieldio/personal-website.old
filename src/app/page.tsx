@@ -26,9 +26,13 @@ export default function Main() {
             </p>
             <hr />
             <p>
-                <a href="https://www.linkedin.com/in/yehezkiel-dio">LinkedIn</a> ·{" "}
-                <a href="https://github.com/elizielx">GitHub</a> ·{"  "}
-                <a href="https://www.instagram.com/yhezkiel.dio/">Instagram</a>
+                <a target="_blank" href="https://www.linkedin.com/in/yehezkiel-dio">LinkedIn</a> ·{" "}
+                <a target="_blank" href="https://github.com/elizielx">GitHub</a> ·{"  "}
+                <a target="_blank" href="https://www.instagram.com/yhezkiel.dio/">Instagram</a>
+            </p>
+            <p>
+            <a target="_blank" href="mailto:contact@yehezkieldio.my.id">Email Me</a> ·{" "}
+            <a target="_blank" href="https://drive.google.com/file/d/14eXZ-XAyyI04r-7OCLnqqAdiKO1R7bsU/view">Download CV</a>
             </p>
         </article>
     );

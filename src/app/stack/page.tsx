@@ -1,6 +1,8 @@
 import { Metadata } from "next";
+import dynamic from 'next/dynamic'
 import { NavLine } from "#/src/components/nav-line";
-import { TechStack } from "#/src/components/tech-stack";
+
+const TechStack = dynamic(() => import("../../components/tech-stack"), { ssr: false })
 
 export const metadata: Metadata = {
     title: "Yehezkiel Dio (elizielx): Technology Stack",

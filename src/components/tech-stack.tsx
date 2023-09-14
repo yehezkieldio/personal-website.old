@@ -33,6 +33,7 @@ export const Technologies = ({ tag, technologies }: { tag: string; technologies:
                     </div>
                 ))}
             </div>
+            <hr />
         </div>
     );
 };
@@ -53,3 +54,5 @@ export const TechStack = ({
         </div>
     );
 };
+
+export default TechStack;
