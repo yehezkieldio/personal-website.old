@@ -4206,8 +4206,8 @@ eslint-config-next@latest:
   linkType: hard
 
 "million@npm:^2.6.0-beta.12":
-  version: 2.6.0-beta.15
-  resolution: "million@npm:2.6.0-beta.15"
+  version: 2.6.0-beta.16
+  resolution: "million@npm:2.6.0-beta.16"
   dependencies:
     "@babel/core": ^7.21.0
     "@babel/generator": ^7.22.7
@@ -4219,7 +4219,7 @@ eslint-config-next@latest:
     unplugin: ^1.3.1
   bin:
     million: packages/cli/dist/index.js
-  checksum: bac7e3f54bde398be9b5711fdaa84b9c03ef85fec8579b07955da61037b702f83cec34b1372813648afc8de998924d1ea7515cb69c2b8179e87a0bebd3fc737b
+  checksum: 6a047de6562d92e7f0352612f5d3d0c6b31cefa874fb039693c515eeb822405701523df363aa90d78c948c3e99cf9b92b378438e4f7348c572b1ef6f19ae17fa
   languageName: node
   linkType: hard
 
