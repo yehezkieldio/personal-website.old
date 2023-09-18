@@ -9,7 +9,7 @@ export const Technologies = ({ tag, technologies }: { tag: string; technologies:
     const technologyNameMapping: { [key: string]: string } = {
         apachekafka: "apache kafka",
         visualstudiocode: "visual studio code",
-        githubactions: "gitHub actions",
+        githubactions: "github actions",
     };
 
     const formatTechnologyName = (technology: string) => {
