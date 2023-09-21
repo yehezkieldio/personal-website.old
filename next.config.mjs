@@ -29,8 +29,7 @@ const nextConfig = {
 };
 
 const millionConfig = {
-    auto: true,
-    auto: { rsc: true },
+    auto: false,
 };
 
 export default million.next(nextConfig, millionConfig);

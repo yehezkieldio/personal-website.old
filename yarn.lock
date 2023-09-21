@@ -2113,7 +2113,7 @@ __metadata:
     framer-motion: ^10.12.16
     husky: ^8.0.3
     lint-staged: ^13.2.2
-    million: ^2.6.0-beta.12
+    million: ^2.6.0
     next: ^13.5.1
     postcss: ^8.4.29
     prettier: ^3.0.0
@@ -4223,7 +4223,7 @@ eslint-config-next@latest:
   languageName: node
   linkType: hard
 
-"million@npm:^2.6.0-beta.12":
+"million@npm:^2.6.0":
   version: 2.6.0
   resolution: "million@npm:2.6.0"
   dependencies:
