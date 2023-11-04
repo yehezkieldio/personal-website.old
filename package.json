@@ -17,7 +17,7 @@
         "@types/react-dom": "18.2.14",
         "@vercel/analytics": "^1.0.1",
         "autoprefixer": "^10.4.15",
-        "eslint": "8.52.0",
+        "eslint": "8.53.0",
         "eslint-config-next": "latest",
         "framer-motion": "^10.12.16",
         "million": "^2.6.0",
